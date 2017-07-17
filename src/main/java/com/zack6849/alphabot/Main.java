@@ -34,7 +34,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Main {
-    public static long startup = 0;
 
     public static void main(String[] args) {
         System.setProperty(SimpleLogger.SHOW_DATE_TIME_KEY, "true");
@@ -44,7 +43,7 @@ public class Main {
         System.setProperty(SimpleLogger.SHOW_LOG_NAME_KEY, "false");
         System.out.println("Starting");
         try {
-            startup = System.currentTimeMillis();
+            public static long startup = System.currentTimeMillis();
             final Config config = new Config();
             PermissionManager manager = new PermissionManager();
             System.out.println("Loading and registering commands");
